@@ -24,8 +24,13 @@
     <link rel="stylesheet" href="css/layouts/marketing.css">
 <!--<![endif]-->
 
+<link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Permanent+Marker" rel="stylesheet">
+
 <style type="text/css">
-.splash-container {background:url(img/hero-bg.jpg) no-repeat 0 0;}
+body, p, li {font-family: 'Oswald', sans-serif;}
+h1, h2, h3, h4, h5 {font-family: 'Permanent Marker', cursive;}
+
+.splash img {display: block;}
 .pure-menu-heading {padding: 0;}
 
 .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } 
@@ -59,56 +64,12 @@
         <p class="splash-subhead">
             A Baltimore Band
         </p>
+     
     </div>
 </div>
 
 <div class="content-wrapper">
-    <!--
-    <div class="content">
-        <h2 class="content-head is-center">Excepteur sint occaecat cupidatat.</h2>
-
-        <div class="pure-g">
-            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-
-                <h3 class="content-subhead">
-                    <i class="fa fa-rocket"></i>
-                    Get Started Quickly
-                </h3>
-                <p>
-                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
-                </p>
-            </div>
-            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-                <h3 class="content-subhead">
-                    <i class="fa fa-mobile"></i>
-                    Responsive Layouts
-                </h3>
-                <p>
-                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
-                </p>
-            </div>
-            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-                <h3 class="content-subhead">
-                    <i class="fa fa-th-large"></i>
-                    Modular
-                </h3>
-                <p>
-                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
-                </p>
-            </div>
-            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-                <h3 class="content-subhead">
-                    <i class="fa fa-check-square-o"></i>
-                    Plays Nice
-                </h3>
-                <p>
-                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
-                </p>
-            </div>
-        </div>
-    </div>
-    -->
-    
+   
     <div class="l-box-lrg pure-g" style="background:#000;padding-top:0; padding-bottom: 0;min-height: 94vh;">
             <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-6">    
                     <h2 class="content-head content-head-ribbon">The Nuffs Are</h2>    
@@ -130,28 +91,6 @@
             </div>
             
         </div>
-    <!--
-    <div class="ribbon l-box-lrg pure-g" style="min-height:800px;background:#000;padding-top:0; padding-bottom: 0;">
-        <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5" style="position:relative;">
-            <div style="position: absolute; left:0;top:0; width: 100%; height: 100%; z-index:1;">
-                
-                <iframe src="https://player.vimeo.com/video/307327233" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                <iframe src="https://www.youtube.com/embed/TcqiKK1eIaU" width="100%" height="100%" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
-        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
-
-            <h2 class="content-head content-head-ribbon">The Nuffs Are</h2>
-
-            <p>
-                Hil Andrews - vocals/guitar<br>
-                Bory Buth - guitar/vocals <br> Sam Galvan - bass/vocals <br> Pete Kuhn - drums/vocals
-            </p>
-            <img src="img/IMG_2618.JPG" style="max-width:100%;">
-            
-        </div>
-    </div>
--->        
 
     <div class="content">
         <h2 class="content-head is-center">Dolore magna aliqua. Uis aute irure.</h2>
@@ -217,19 +156,12 @@ $(document).ready(function($) {
         $("#myvideo").vimeo("pause");
     });
     
-    $(".mute").click(function(){
-        var muted = 
+    $(".mute").click(function(){      
         
-        if 
         $("#myvideo").vimeo("setVolume", 0.0);
         //$("#myvideo").vimeo("setVolume", 1.0);
     });
-
-
-    $("#myvideo").vimeo("getVolume", function(data){
-	console.log( "Volume is", data ); 
-})
-    
+ 
 
 });
 
