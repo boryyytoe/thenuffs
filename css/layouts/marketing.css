@@ -29,6 +29,8 @@ label {
     height: auto;
 }
 
+.pure-menu-selected .pure-menu-link, .pure-menu-selected .pure-menu-link:visited{color:#ccc;}
+
 /*
  * -- LAYOUT STYLES --
  * These are some useful classes which I will need
@@ -47,25 +49,27 @@ label {
 }
 
 
-
 /*
  * -- PURE FORM STYLES --
  * Style the form inputs and labels
  */
+.pure-g {letter-spacing: normal !important;}
 .pure-form label {
-    margin: 1em 0 0;
+    margin: 0;
     font-weight: bold;
     font-size: 100%;
 }
-
+.pure-form fieldset{padding: 0;}
 .pure-form input[type] {
     border: 2px solid #ddd;
     box-shadow: none;
     font-size: 100%;
     width: 100%;
     margin-bottom: 1em;
+    border-radius: 0;
 }
-
+.pure-form input[type=password], .pure-form input[type=email], .pure-form input[type=url], .pure-form input[type=date], .pure-form input[type=month], .pure-form input[type=time], .pure-form input[type=datetime], .pure-form input[type=datetime-local], .pure-form input[type=week], .pure-form input[type=tel], .pure-form input[type=color], .pure-form input[type=number], .pure-form input[type=search], .pure-form input[type=text], .pure-form select, .pure-form textarea {border-radius: 0;box-shadow: none;}
+.foot textarea {width:100%;border: 2px solid #ddd;}
 /*
  * -- PURE BUTTON STYLES --
  * I want my pure-button elements to look a little different
@@ -100,7 +104,7 @@ a.pure-button-primary {
 }
 .pure-menu.pure-menu-fixed {
     /* Fixed menus normally have a border at the bottom. */
-    border-bottom: none;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.2);
     /* I need a higher z-index here because of the scroll-over effect. */
     z-index: 4;
 }
@@ -116,7 +120,7 @@ a.pure-button-primary {
 }
 
 .home-menu a {
-    color: #6FBEF3;
+    color: #fff;
 }
 .home-menu li a:hover,
 .home-menu li a:focus {
@@ -138,7 +142,7 @@ a.pure-button-primary {
     /* The following styles are required for the "scroll-over" effect */
     width: 100%;
     height: 480px;
-    top: 66px;
+    top: 48px;
     left: 0;
     position: fixed !important;
     background-image:url(../../img/quad.jpg), url(../../img/thestill.jpg);
@@ -156,8 +160,9 @@ a.pure-button-primary {
     top: 100px; left: 0; bottom: 0; right: 0;
     text-align: center;
     text-transform: uppercase;
+    color: #fff;
 }
-
+.splash h1 {color: #fff;}
 /* This is the main heading that appears on the blue section */
 .splash-head {
     font-size: 20px;
@@ -167,6 +172,7 @@ a.pure-button-primary {
     font-weight: 100;
     border-radius: 5px;
     line-height: 1em;
+    text-align: center;
 }
 
 /* This is the subheading that appears on the blue section */
@@ -183,7 +189,7 @@ a.pure-button-primary {
 .content-wrapper {
     /* These styles are required for the "scroll-over" effect */
     position: absolute;
-    top: 61%;
+    top: 55%;
     width: 100%;
     min-height: 12%;
     z-index: 2;
@@ -235,6 +241,15 @@ a.pure-button-primary {
     width: 100%;
 }
 
+#videosection {background:#000;padding-top:0; padding-bottom: 0;position:relative;}
+
+.weare ul{margin: 0;padding:0 0 1em 0;}
+.weare li {color:#fff;list-style: none;margin: 0;padding:0 1em 0 0;display: inline-block;}
+
+#controls {display: none;}
+
+.foot h4 {margin:0;padding:0;}
+
 /*
  * -- TABLET (AND UP) MEDIA QUERIES --
  * On tablets and other medium-sized devices, we want to customize some
@@ -259,11 +274,11 @@ a.pure-button-primary {
     /* We increase the height of the splash-container */
     .splash-container {
         height: 87vh;
-        background-image:url(../../img/quad.jpg), url(../../img/quad.jpg);
+        background-image:url(../../img/quad.jpg), url(../../img/quad-blur.jpg);
         background-repeat: no-repeat, no-repeat;
         background-size: contain, cover;
         background-position: center top, center bottom;
-        top:67px;
+        top:59px;
     }
     
 
@@ -282,7 +297,8 @@ a.pure-button-primary {
     .l-box-lrg {
         border: none;
     }
-    .content-wrapper{top: 90%;}
+    .content-wrapper{top: 86%;}
+    
 
 }
 
@@ -292,9 +308,14 @@ a.pure-button-primary {
  * of the mobile and tablet styles.
  */
 @media (min-width: 78em) {
+    .pure-menu.pure-menu-fixed {        
+        border-bottom: 10px solid rgba(255, 255, 255, 0.2);
+    }
+    .pure-form input[type] {width:47%;}
+
     /* We increase the header font size even more */
     .splash-head {
-        font-size: 300%;
+        font-size: 500%;
     }
     
     .splash-container {
@@ -304,4 +325,25 @@ a.pure-button-primary {
     background-position: center top, center bottom;
     height:87vh;
     }
+
+    #videosection {min-height: 94vh;}
+    
+    .weare {padding:0 1em;position: absolute;top:5%;right:5%;z-index: 2;font-size: 170%;line-height: 1.4;width:22%;background: #000;}
+    .weare li {display:block;margin: 0;padding:0;}
+    
+    #videoclip {position: absolute;top:0;left:0;z-index: 1;}
+    #controls {padding-bottom: 1em;padding-left: 3em;display: block;}
+
+    #btnPlayPause {
+        text-indent:-9999px;
+        width:70px;
+        height:70px;
+        border:none;
+        cursor:pointer;    
+        background: url(../../img/playpause.png) no-repeat 0 -70px;
+    }
+    
+    
+    #btnPlayPause.play.paused { background-position:0 0; }
+    #btnPlayPause.play { background-position:0 -70px; }
 }
