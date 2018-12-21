@@ -27,10 +27,11 @@
 <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
 
 <style type="text/css">
+body {background:#000;}
 body, p, li, h1, h2, h3, h4, h5,
 .pure-g [class*=pure-u] {font-family: 'Oswald', sans-serif;}
 .pure-g [class*=pure-u] {padding:0 20px}
-
+.splash-container {height: 100vh;}
 .splash img {margin: 0 auto;padding:0;}
 .pure-menu-heading {padding: 0;}
 
@@ -66,164 +67,6 @@ body, p, li, h1, h2, h3, h4, h5,
      
     </div>
 </div>
-
-<div class="content-wrapper">
-   
-    <div class="l-box-lrg pure-g" id="videosection">
-            <div class="pure-u-1 pure-u-md-1-1 pure-u-lg-1">    
-                    <div class="weare">                        
-                        <p class="content-head content-head-ribbon">We're a Baltimore based band performing a mixture of covers and original songs.</p>
-                        <ul>
-                            <li>Hil Andrews - vocals/guitar</li>
-                            <li>Bory Buth - guitar/vocals</li>
-                            <li>Sam Galvan - bass/vocals</li>
-                            <li>Pete Kuhn - drums/vocals</li>
-                        </ul>
-                        <div id='controls'>                            
-                            <button id='btnPlayPause' class='play' title='play' accesskey="P" onclick='playPauseVideo();'>Play</button>
-                        </div>
-                    </div>
-                </div>    
-                <video id="videoclip" width="100%" height="100%" controls>
-                    <source src="media/been-caught-cheating2.mp4" type="video/mp4">                        
-                    Your browser does not support the video tag.
-                </video>                    
-        </div>
-
-    <div class="content foot">
-        <h2 class="content-head is-center">Contact Us</h2>
-
-        <div class="pure-g">
-            <div class="pure-u-1 pure-u-sm-1-1 pure-u-md-2-5 pure-u-xl-1-5">
-                <h4>Like Us on Facebook</h4>
-                <!-- Load Facebook SDK for JavaScript -->
-                <div id="fb-root"></div>
-                <script>(function(d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(id)) return;
-                    js = d.createElement(s); js.id = id;
-                    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
-                    fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));</script>
-
-                <!-- Your embedded video player code -->
-                <div class="fb-video" data-href="https://www.facebook.com/thenuffs/videos/2059901930968358/" data-show-text="false">
-                    <div class="fb-xfbml-parse-ignore">
-                        <blockquote cite="https://www.facebook.com/thenuffs/videos/2059901930968358/">                                                
-                        </blockquote>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="pure-u-1 pure-u-sm-1-1 pure-u-md-3-5 pure-u-xl-4-5">
-                
-                <form class="pure-form pure-form-stacked" action="https://submit.jotform.us/submit/83546188461162/" method="post" name="form_83546188461162" id="83546188461162" accept-charset="utf-8">
-                        <fieldset>
-                            <input type="hidden" name="formID" value="83546188461162" />
-    
-                            <label class="form-sub-label" for="first_3" id="sublabel_first" style="min-height:13px">First Name </label>
-                            <input placeholder="Your first name" type="text" id="first_3" name="q3_name[first]" class="form-textbox" size="10" value="" data-component="first" />
-    
-                            <label class="form-sub-label" for="last_3" id="sublabel_last" style="min-height:13px"> Last Name </label>
-                            <input placeholder="Your last name" type="text" id="last_3" name="q3_name[last]" class="form-textbox" size="15" value="" data-component="last" />
-                            
-                            <label class="form-label form-label-left form-label-auto" id="label_4" for="input_4"> E-mail </label>
-                            <input placeholder="Enter your email address" type="email" id="input_4" name="q4_email" class="form-textbox validate[Email]" size="30" value="" data-component="email" />
-    
-                            <label class="form-label form-label-left form-label-auto" id="label_5" for="input_5"> Message </label>
-                            <textarea placeholder="Leave us a message" id="input_5" class="form-textarea" name="q5_message" cols="40" rows="6" data-component="textarea"></textarea>
-    
-                            <button id="input_2" type="submit" class="form-submit-button" data-component="button">
-                                    Submit
-                            </button>
-                            <div style="display:none">
-                                    Should be Empty:
-                                    <input type="text" name="website" value="" />
-                            </div>
-                        </fieldset>
-                    </form>
-            </div>
-        </div>
-
-    </div>
-
-</div>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
-<script src="js/jquery.vimeo.api.min.js"></script>
-
-
-<script>
-    
-    $(document).on('click', 'video, #btnPlayPause', function (e) {
-        var video = $('video').get(0);  // This line has been updated.
-        if (video.paused === false) {
-            video.pause();
-            $("#btnPlayPause").removeClass("paused");
-            } else {
-            video.play();
-            $("#btnPlayPause").addClass("paused");
-        }
-        return false;
-    });
-
-/*    
-// Get a handle to the player
-player       = document.getElementById('videoclip');
-btnPlayPause = document.getElementById('btnPlayPause');
-	
-
-	// Add a listener for the play and pause events so the buttons state can be updated
-	player.addEventListener('play', function() {
-		// Change the button to be a pause button
-		changeButtonType(btnPlayPause, 'pause');
-	}, false);
-  
-	player.addEventListener('pause', function() {
-		// Change the button to be a play button
-		changeButtonType(btnPlayPause, 'play');
-	}, false);
-	
-	  
-	player.addEventListener('ended', function() { this.pause(); }, false);	
-  
-  progressBar.addEventListener("click", seek);
-
-
-  function playPauseVideo() {
-  	if (player.paused || player.ended) {
-  		// Change the button to a pause button
-  		changeButtonType(btnPlayPause, 'pause');
-  		player.play();
-  	}
-  	else {
-  		// Change the button to a play button
-  		changeButtonType(btnPlayPause, 'play');
-  		player.pause();
-  	}
-  }
-  
-  
-  
-  // Updates a button's title, innerHTML and CSS class
-  function changeButtonType(btn, value) {
-  	btn.title     = value;
-  	btn.innerHTML = value;
-  	btn.className = value;
-  }
-  
-  function resetPlayer() {
-  	progressBar.value = 0;
-  	// Move the media back to the start
-  	player.currentTime = 0;
-  	// Set the play/pause button to 'play'
-  	changeButtonType(btnPlayPause, 'play');
-  }  
-*/  
-</script>
 
 
 </body>
