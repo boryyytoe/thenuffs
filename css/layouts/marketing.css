@@ -24,6 +24,9 @@ label {
     color: #000;
 }
 
+a {color: #fff;}
+a:hover {opacity: 0.7;}
+
 .pure-img-responsive {
     max-width: 100%;
     height: auto;
@@ -100,7 +103,7 @@ a.pure-button-primary {
     box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
 }
 .home-menu {
-    background: #1d1d1d;
+    background:rgba(29, 29, 29, 0.74);
 }
 .pure-menu.pure-menu-fixed {
     /* Fixed menus normally have a border at the bottom. */
@@ -229,7 +232,7 @@ a.pure-button-primary {
 
 /* This is the class used for the dark-background areas. */
 .ribbon {
-    background: #2d3e50;
+    background: #696969;
     color: #fff;
 }
 
@@ -249,6 +252,13 @@ a.pure-button-primary {
 #controls {display: none;}
 
 .foot h4 {margin:0;padding:0;}
+#shows {background: url(../../img/crowd.jpg) no-repeat center top / cover;}
+#shows {text-shadow: 1px 1px 2px #000;}
+#shows h2 {color: #fff;}
+#shows li {list-style: none;}
+#shows s{text-shadow: none;}
+
+.pure-form{width:100%;margin:auto;}
 
 /*
  * -- TABLET (AND UP) MEDIA QUERIES --
@@ -267,9 +277,9 @@ a.pure-button-primary {
     .home-menu {
         text-align: left;
     }
-        .home-menu ul {
-            float: right;
-        }
+    .home-menu ul {
+        float: right;
+    }
 
     /* We increase the height of the splash-container */
     .splash-container {
@@ -278,7 +288,7 @@ a.pure-button-primary {
         background-repeat: no-repeat, no-repeat;
         background-size: contain, cover;
         background-position: center top, center bottom;
-        top:59px;
+        top:0;
     }
     
 
@@ -299,7 +309,11 @@ a.pure-button-primary {
     }
     .content-wrapper{top: 86%;}
     
+    #shows {font-size: 170%;line-height: 1.4;}
 
+    .showdates{width:400px;margin:auto;}
+
+    .pure-form{width:60%;margin:auto;}
 }
 
 /*
@@ -309,7 +323,7 @@ a.pure-button-primary {
  */
 @media (min-width: 78em) {
     .pure-menu.pure-menu-fixed {        
-        border-bottom: 10px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
     }
     .pure-form input[type] {width:47%;}
 
@@ -319,7 +333,7 @@ a.pure-button-primary {
     }
     
     .splash-container {
-    background-image:url(../../img/hero-bg.jpg), none;
+    background-image:url(../../img/hero-bg2.jpg), none;
     background-repeat: no-repeat, no-repeat;
     background-size: cover, cover;
     background-position: center top, center bottom;
