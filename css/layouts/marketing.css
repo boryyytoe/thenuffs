@@ -150,17 +150,17 @@ a.pure-button-primary {
     position: fixed !important;
     background-image:url(../../img/quad.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: center top;
 }
 
 .splash {
     /* absolute center .splash within .splash-container */
     width: 80%;
-    height: 50%;
+    height: 50vh;
     margin: auto;
     position: absolute;
-    top: 100px; left: 0; bottom: 0; right: 0;
+    top: 45vh; left: 0; bottom: 0; right: 0;
     text-align: center;
     text-transform: uppercase;
     color: #fff;
@@ -284,11 +284,11 @@ a.pure-button-primary {
 
     /* We increase the height of the splash-container */
     .splash-container {
-        height: 87vh;
-        background-image:url(../../img/quad.jpg), url(../../img/quad-blur.jpg);
-        background-repeat: no-repeat, no-repeat;
-        background-size: contain, cover;
-        background-position: center top, center bottom;
+        height: 100vh;
+        background-image:url(../../img/quad.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
         top:0;
     }
     
@@ -309,7 +309,7 @@ a.pure-button-primary {
     .l-box-lrg {
         border: none;
     }
-    .content-wrapper{top: 86%;}
+    
     
     #shows {font-size: 170%;line-height: 1.4;}
 
@@ -339,7 +339,7 @@ a.pure-button-primary {
     background-repeat: no-repeat, no-repeat;
     background-size: cover, cover;
     background-position: center top, center bottom;
-    height:87vh;
+    height:100vh;
     }
 
     #videosection {min-height: 94vh;}
