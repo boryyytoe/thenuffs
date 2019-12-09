@@ -41,11 +41,14 @@ body, p, li, h1, h2, h3, h4, h5,
 
 .pure-menu-heading {padding: 0;}
 
-.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } 
+.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; width:70%;} 
 .embed-container iframe, 
 .embed-container object, 
 .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
+@media (max-width: 1024px) {
+    .embed-container { width:100%; margin-bottom: 2em;} 
+}
 
 </style>
 </head>
@@ -86,15 +89,23 @@ body, p, li, h1, h2, h3, h4, h5,
                             <li>Sam Galvan - bass/vocals</li>
                             <li>Pete Kuhn - drums/vocals</li>
                         </ul>
+                        <!--
                         <div id='controls'>                            
                             <button id='btnPlayPause' class='play' title='play' accesskey="P" onclick='playPauseVideo();'>Play</button>
                         </div>
+                        -->
                     </div>
-                </div>    
+                </div>
+                <!-- 
                 <video id="videoclip" width="100%" height="100%" controls>
                     <source src="media/been-caught-cheating2.mp4" type="video/mp4">                        
                     Your browser does not support the video tag.
-                </video>                    
+                </video>
+                -->
+                <div class='embed-container'>
+                    <iframe src="https://www.youtube.com/embed/OG7led8BEn4?start=6&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&color=white" width="560" height="315" frameborder="0"></iframe>
+                </div>
+
         </div>
 
     <div class="content ribbon" id="shows">
@@ -104,9 +115,21 @@ body, p, li, h1, h2, h3, h4, h5,
                     
                     <ul>
                         <!--<li><s>09.22.18 - <a href="http://www.waterfronthotel.us/" target="_blank">Waterfront Hotel</a></s></li>
-<li><s>11.10.18 - <a href="http://www.waterfronthotel.us/" target="_blank">Waterfront Hotel</a></s></li>-->
-<li>1.25.20 - <a href="https://www.facebook.com/jerrysbelvederetavern/" target="_blank">Jerry's Belvedere Tavern</a></li>
-			    <li><p>Check back for more 2020 dates! <br> Like us on <a href="https://www.facebook.com/thenuffs/" target="_blank">Facebook</a>.</p></li>
+                        <li><s>11.10.18 - <a href="http://www.waterfronthotel.us/" target="_blank">Waterfront Hotel</a></s></li>
+                        <li><s>12.7.18 - <a href="http://www.waterfronthotel.us/" target="_blank">Waterfront Hotel</a></s></li>
+                        -->
+                        <li><s>1.12.19 - <a href="http://www.thestilltimonium.com/" target="_blank">The Still</a></s></li>
+                        <li><s>2.9.19 - <a href="https://www.invernessbrewing.com/" target="_blank">Inverness Brewing</a></s></li>
+                        <li><s>4.5.19 - <a href="http://www.thestilltimonium.com/" target="_blank">The Still</a></s></li>                        
+                        <li><s>5.5.19 - <a href="http://fulltiltbrewing.com/" target="_blank">Full Tilt Brewing</a></s></li>
+                        <li><s>5.18.19 - <a href="http://waverlybrewingcompany.com/" target="_blank">Waverly Brewing</a></s></li>
+                        <li><s>6.21.19 - <a href="https://www.michaelscafe.com/" target="_blank">Michael's Cafe</a></s></li>
+                        <li><s>7.27.19 - <a href="https://www.invernessbrewing.com/" target="_blank">Inverness Brewing</a></s></li>
+                        <li><s>9.1.19 - <a href="http://andersonfarms.us/" target="_blank">Burnt Barn Jamboree</a></s></li>
+                        <li><s>9.28.19 - <a href="https://www.invernessbrewing.com/" target="_blank">Inverness Brewing</a></s></li>
+                        <li><s>10.11.19 - <a href="https://www.michaelscafe.com/" target="_blank">Michael's Cafe</a></s></li>
+                        <li>1.25.20 - <a href="https://www.facebook.com/jerrysbelvederetavern/" target="_blank">Jerry's Belvedere Tavern</a></li>
+                        <li><p>Check back for more 2020 dates! <br> Like us on <a href="https://www.facebook.com/thenuffs/" target="_blank">Facebook</a>.</p></li>
                     </ul>                
                 </div>
                 <!--
@@ -206,7 +229,7 @@ body, p, li, h1, h2, h3, h4, h5,
 $( document ).ready(function() {
   
 
-    
+    /*
     $(document).on('click', 'video, #btnPlayPause', function (e) {
         var video = $('video').get(0);  // This line has been updated.
         if (video.paused === false) {
@@ -217,7 +240,7 @@ $( document ).ready(function() {
             $("#btnPlayPause").addClass("paused");
         }
         return false;
-    });
+    });*/
 
     $('#navigation a[href*="#"]').on('click', function (el) {
         el.preventDefault();
