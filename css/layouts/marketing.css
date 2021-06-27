@@ -253,7 +253,17 @@ a.pure-button-primary {
 #controls {display: none;}
 
 .foot h4 {margin:0;padding:0;}
-#shows {background: url(../../img/crowd.jpg) no-repeat center top / cover;}
+#shows {background: url(../../img/crowd.jpg) no-repeat center top / cover;position: relative; z-index: 1;}
+#shows::before {
+    content: "";
+    width:100%;
+    height:100%;
+    position: absolute;
+    background-color: rgba(0,0,0, 0.45);
+    z-index: -1;
+    left: 0;
+    top: 0;
+}
 #shows {text-shadow: 1px 1px 2px #000;}
 #shows h2 {color: #fff;}
 #shows li {list-style: none;}
