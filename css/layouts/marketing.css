@@ -148,7 +148,7 @@ a.pure-button-primary {
     top: 0;
     left: 0;
     position: fixed !important;
-    background-image:url(../../img/quad.jpg);
+    background-image:url(../../img/quad-2023.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
@@ -295,7 +295,7 @@ a.pure-button-primary {
     /* We increase the height of the splash-container */
     .splash-container {
         height: 100vh;
-        background-image:url(../../img/quad.jpg);
+        background-image:url(../../img/quad-2023.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center top;
@@ -345,7 +345,7 @@ a.pure-button-primary {
     }
     
     .splash-container {
-    background-image:url(../../img/hero-bg2.jpg), none;
+    background-image:url(../../img/hero-bg-2023.jpg), none;
     background-repeat: no-repeat, no-repeat;
     background-size: cover, cover;
     background-position: center top, center bottom;
